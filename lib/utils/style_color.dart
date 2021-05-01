@@ -9,26 +9,20 @@ const lightBackground = Color.fromRGBO(167, 164, 171, 1);
 const mainButtonColor = Colors.pink;
 const myBackgroundColor = Color.fromRGBO(46, 61, 77, 1);
 
-const checkedTextStyle = const TextStyle(
-  fontSize: 17,
-  fontWeight: FontWeight.w700,
-  color: Colors.pink,
-  decoration: TextDecoration.underline,
-  decorationThickness: 2,
-);
+const mainWhiteBackgroundColor = Colors.white;
+const backgroundGray = Color.fromRGBO(240, 240, 240, 1);
 
-const unCheckedTextStyle = const TextStyle(
-  fontSize: 10,
-  fontWeight: FontWeight.w400,
-  color: Colors.pink,
-);
+const mainBtnColor = Color.fromRGBO(137, 41, 67, 1);
+const blueShape = Color.fromRGBO(1, 97, 137, 1);
+const lightBlue = Color.fromRGBO(31, 163, 251, 1);
+const mainBorderColor = Color.fromRGBO(1, 97, 137, 1);
+const trasnparentBlueShape = Color.fromRGBO(1, 97, 137, 0.5);
+const titleColor = Color.fromRGBO(0, 40, 57, 1);
+const greyShape = Color.fromRGBO(203, 203, 203, 1);
 
-const usualInfoTextStyle = TextStyle(
-  color: Colors.white,
-  height: 1,
-  fontSize: 14,
-  fontWeight: FontWeight.w500,
-);
+const darkBackground = Color.fromRGBO(3, 21, 56, 1);
 
-const titleTextStyle = TextStyle(
-    color: Colors.white, height: 1, fontSize: 17, fontWeight: FontWeight.w600);
+const formScaffoldPadding = EdgeInsets.symmetric(horizontal: 16, vertical: 60);
+
+var iconColor = mainBtnColor;
+var iconSize = 20.0;

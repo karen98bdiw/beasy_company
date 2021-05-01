@@ -38,3 +38,18 @@ DateTime timeOfDaytoDate(TimeOfDay timeOfDay) {
   return DateTime(
       curent.year, curent.month, curent.day, timeOfDay.hour, timeOfDay.minute);
 }
+
+var dummyUserImage =
+    "https://library.kissclipart.com/20180901/krw/kissclipart-user-thumbnail-clipart-user-lorem-ipsum-is-simply-bfcb758bf53bea22.jpg";
+var dummyProfileImg =
+    "https://suryahospitals.com/jaipur/wp-content/uploads/sites/3/2020/07/dummy-user.jpg";
+
+dynamic emailValidator(String value) {
+  return value.isEmpty || !isValidEmail(value) ? "Invalid E-Main" : null;
+}
+
+dynamic passwordValidator(String value) {
+  return value.isEmpty || value.length < 6
+      ? "Password must contains at last 6 symbols"
+      : null;
+}

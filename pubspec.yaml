@@ -28,6 +28,11 @@ dependencies:
   cloud_firestore: ^0.16.0
   firebase_storage: ^7.0.0
   provider: ^4.3.0   
+  flutter_svg: ^0.18.0  
+  auto_size_text: ^2.1.0
+  country_code_picker: ^1.2.4
+  flutter_native_splash: ^0.1.9
+  keyboard_dismisser: ^1.0.2
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -50,9 +55,34 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/inAppLogo.svg
+    - assets/images/intorTopLeftClip.svg
+    - assets/images/introScreenBottomRightClip.svg
+    - assets/images/loginActionScreenCenterLeftClip.svg
+    - assets/images/loginActionScreenTopLeftClip.svg
+    - assets/images/loginActionScreenTopRightClip.svg
+    - assets/images/roundedAppBarClip.svg
+    - assets/images/googlePlusIcon.svg
+    - assets/images/linkedinIcon.svg
+    - assets/icons/dropDownIcon.svg
+    - assets/icons/emailPrefix.svg
+    - assets/icons/passwordPrefix.svg
+    - assets/icons/passwordSuffix.svg
+    - assets/icons/adressPrefix.svg
+    - assets/icons/behancePrefix.svg
+    - assets/icons/buildingPrefix.svg
+    - assets/icons/dribblePrefix.svg
+    - assets/icons/linkedinPrefix.svg
+    - assets/icons/locationPrefix.svg
+    - assets/icons/userPrefix.svg
+    - assets/icons/zipPrefix.svg
+    - assets/icons/doneIcon.svg    
+    - assets/icons/backIcon.svg
+    - assets/images/inAppLogo.png
+    - assets/images/splash.png
+    - assets/images/logo.gif
+    - assets/images/linearBackground.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
