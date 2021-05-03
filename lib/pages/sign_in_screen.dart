@@ -53,8 +53,16 @@ class _SignInScreenState extends State<SignInScreen> {
         );
     hideLoading();
     if (res.errorText == null) {
-      _formState.currentState.reset();
-      Navigator.of(context).pushNamed(HomeScreen.routeName);
+      if (BeasyApi().userServices.curentUser.userType ==
+          UserType.CompanyOwner) {
+        _formState.currentState.reset();
+        Navigator.of(context).pushNamed(HomeScreen.routeName);
+      } else {
+        await showError(
+            title: "Warning",
+            errorText: notCopmanyOwnerErrorText,
+            context: context);
+      }
     } else {
       await showError(errorText: userNotExist, context: context);
     }

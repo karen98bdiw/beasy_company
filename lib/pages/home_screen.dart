@@ -1,5 +1,5 @@
-import 'package:beasy_company/beasy_company.dart';
 import 'package:beasy_company/models/user_models/user.dart';
+import 'package:beasy_company/pages/creating_company_screen.dart';
 import 'package:beasy_company/services/beasyApi.dart';
 import 'package:beasy_company/utils/helpers.dart';
 import 'package:beasy_company/utils/style_color.dart';
@@ -127,7 +127,7 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: const EdgeInsets.all(15),
             child: Text(
               "You can create your company reference with Beasy in couple of minute, after this you will able to use all our features,manage your buisnes company queue,make your workers account and let all users to know about you!",
-              style: smallTextStyle(color: Colors.white),
+              style: smallTextStyle(color: mainButtonColor),
               textAlign: TextAlign.center,
             ),
           ),
@@ -145,7 +145,10 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               CustomBtn(
                 title: "Create Company",
-                onClick: () {},
+                onClick: () {
+                  Navigator.of(context)
+                      .pushNamed(CreatingCompanyScreen.routeName);
+                },
               ),
             ],
           ),

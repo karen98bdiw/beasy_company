@@ -6,11 +6,13 @@ class CompanyStream {
   String streamName;
   String streamDescription;
   bool companyStreamState;
-  final List<String> streamImages;
+  String avatar;
+  List<String> streamImages;
   List<StreamQueueItem> queue = [];
   List<CompanyStreamService> streamServices = [];
 
   CompanyStream({
+    this.avatar,
     this.companyStreamId,
     this.streamImages,
     this.streamName,
@@ -21,6 +23,7 @@ class CompanyStream {
 
   factory CompanyStream.fromJson(json) {
     return CompanyStream(
+      avatar: json["avatar"],
       companyStreamId: json["companyStreamId"],
       streamName: json["streamName"],
       streamDescription: json["streamDescription"],
@@ -42,7 +45,7 @@ class CompanyStream {
     var data = Map<String, dynamic>();
 
     data["companyStreamId"] = this.companyStreamId;
-
+    data["avatar"] = this.avatar;
     data["streamName"] = this.streamName;
     data["streamDescription"] = this.streamDescription;
     data["streamImages"] = this.streamImages;

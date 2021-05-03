@@ -148,6 +148,67 @@ class _TitledCheckBoxState extends State<TitledCheckBox> {
   }
 }
 
+class RoundedCheckBox extends StatefulWidget {
+  final bool value;
+  final ValueChanged onChanged;
+  final String title;
+  final bool showTitle;
+
+  RoundedCheckBox({
+    this.value,
+    this.onChanged,
+    this.title,
+    this.showTitle = false,
+  });
+
+  @override
+  _RoundedCheckBoxState createState() => _RoundedCheckBoxState();
+}
+
+class _RoundedCheckBoxState extends State<RoundedCheckBox> {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        widget.onChanged(!widget.value);
+      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            height: 20,
+            width: 20,
+            decoration: BoxDecoration(
+              border: Border.all(color: mainBorderColor, width: 1),
+              borderRadius: BorderRadius.circular(4),
+            ),
+            child: widget.value
+                ? Center(
+                    child: SvgPicture.asset("assets/icons/doneIcon.svg"),
+                  )
+                : Container(),
+          ),
+          SizedBox(
+            width: 8,
+          ),
+          widget.showTitle
+              ? Expanded(
+                  // width: MediaQuery.of(context).size.width * 0.35,
+
+                  child: AutoSizeText(
+                    widget.title ?? "",
+                    style: mediumTextStyle(),
+                    maxLines: 1,
+                  ),
+                )
+              : Container(),
+        ],
+      ),
+    );
+  }
+}
+
 class TitledRadioButton extends StatelessWidget {
   final bool value;
   final ValueChanged<bool> onChanged;

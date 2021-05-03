@@ -5,6 +5,7 @@ class Company {
   String companyId;
   String companyOwnerId;
   String companyName;
+  String copmanyAdress;
   String companyDescription;
   List<String> companyImages;
   List<String> workDays;
@@ -25,10 +26,12 @@ class Company {
     this.companyName,
     this.companyAvatar,
     this.companyImages,
+    this.copmanyAdress,
   });
 
   factory Company.fromJson(json) {
     return Company(
+      copmanyAdress: json["companyAdress"],
       workDays: json['workDays'] != null
           ? (json['workDays'] as List).map((e) => e.toString()).toList()
           : null,
@@ -55,6 +58,7 @@ class Company {
 
     data["companyId"] = this.companyId;
     data["companyOwnerId"] = this.companyOwnerId;
+    data["companyAdress"] = this.copmanyAdress;
     data["companyDescription"] = this.companyDescription;
     data['endTime'] = this.endTime;
     data['startTime'] = this.startTime;

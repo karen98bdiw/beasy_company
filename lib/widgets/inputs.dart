@@ -46,6 +46,8 @@ class CustomFormInput extends StatelessWidget {
   final FocusNode focuseNode;
   final TextInputAction inputAction;
   final Function onEditingComplate;
+  final int maxLines;
+  final int minLines;
 
   CustomFormInput({
     this.onEditingComplate,
@@ -59,6 +61,8 @@ class CustomFormInput extends StatelessWidget {
     this.textCentered = false,
     this.sufix,
     this.controller,
+    this.maxLines = 1,
+    this.minLines = 1,
   });
   @override
   Widget build(BuildContext context) {
@@ -73,6 +77,8 @@ class CustomFormInput extends StatelessWidget {
         obscureText: obscureText,
         validator: validator,
         onSaved: onSaved,
+        minLines: minLines,
+        maxLines: maxLines,
         decoration: InputDecoration(
           prefixIcon: prefix != null
               ? Padding(

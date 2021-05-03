@@ -1,3 +1,5 @@
+import 'package:beasy_company/pages/add_stream_page.dart';
+import 'package:beasy_company/pages/creating_company_screen.dart';
 import 'package:beasy_company/pages/home_screen.dart';
 import 'package:beasy_company/pages/onBoard.dart';
 import 'package:beasy_company/pages/sign_in_screen.dart';
@@ -16,6 +18,8 @@ class BeasyCompany extends StatelessWidget {
         SignInScreen.routeName: (c) => SignInScreen(),
         SignUpScreen.routeName: (c) => SignUpScreen(),
         HomeScreen.routeName: (c) => HomeScreen(),
+        CreatingCompanyScreen.routeName: (c) => CreatingCompanyScreen(),
+        AddStreamScreen.routeName: (c) => AddStreamScreen(),
       },
     );
   }

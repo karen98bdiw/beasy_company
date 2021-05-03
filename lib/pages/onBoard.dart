@@ -61,7 +61,7 @@ class _OnBoardState extends State<OnBoard> {
                     "assets/images/googlePlusIcon.svg",
                     width: MediaQuery.of(context).size.height * 0.3,
                     height: MediaQuery.of(context).size.height * 0.3,
-                    color: Colors.white,
+                    color: mainBtnColor,
                   ),
                   SizedBox(
                     height: 10,
@@ -90,8 +90,8 @@ class _OnBoardState extends State<OnBoard> {
           ),
           CustomBtn(
             outlined: true,
-            outlineColor: Colors.white,
-            textColor: Colors.white,
+            outlineColor: Colors.black,
+            textColor: mainBtnColor,
             title: "Sign Up",
             onClick: () {
               Navigator.of(context).pushNamed(SignUpScreen.routeName);
